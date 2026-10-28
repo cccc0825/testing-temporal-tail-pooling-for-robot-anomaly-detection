@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+data/
+runs/
+analysis/*.csv
+analysis/*_rows.tex
+analysis/run_manifest.json
+figures/
+prepared/

@@ -1,0 +1,35 @@
+[
+  {
+    "config": "elapsed128_l1",
+    "fit_score_seconds": 0.9518180409795605
+  },
+  {
+    "config": "elapsed128_l2",
+    "fit_score_seconds": 0.685240667022299
+  },
+  {
+    "config": "index128_l1",
+    "fit_score_seconds": 0.9779450419882778
+  },
+  {
+    "config": "index128_l2",
+    "fit_score_seconds": 0.5895129169803113
+  },
+  {
+    "config": "elapsed64_l1",
+    "fit_score_seconds": 0.4506383330153767
+  },
+  {
+    "config": "elapsed256_l1",
+    "fit_score_seconds": 2.2719690410012845
+  },
+  {
+    "config": "pca",
+    "components": 69,
+    "fit_score_seconds": 0.13085029099602252
+  },
+  {
+    "config": "iforest",
+    "fit_score_seconds": 0.2164584159909282
+  }
+]

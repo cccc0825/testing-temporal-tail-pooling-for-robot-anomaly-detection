@@ -1,0 +1,61 @@
+{
+  "timestamp_utc": "2026-09-14T07:16:25.539855+00:00",
+  "status": "post-hoc descriptive reanalysis after prior test inspection; not preregistered",
+  "inputs": [
+    {
+      "path": "existing_probe/results/existing_probe_v1/voraus_scores.npz",
+      "sha256": "a62669ec497879c85cc57ec43732e5b315ce3895fee905f4015e1f6b0a66217b"
+    },
+    {
+      "path": "existing_probe/prepared/voraus_rows.json",
+      "sha256": "45154477dc08de4d3864d25757c3d6cbf7e3824e98be003559237d163a3c8715",
+      "source_sha256": "665df66536e15829e26fa946583177d0e87aeadba86ae55bef2f658cd838c3d5",
+      "public_transformation": "Retained ordered id/anomaly/category only; omitted unused source metadata."
+    },
+    {
+      "path": "existing_probe/prepared/voraus_split.json",
+      "sha256": "2cb4f00c9e1538be876c691b9909afd3a8cdce64b7090b794c8b407587770bff"
+    },
+    {
+      "path": "existing_probe/results/existing_probe_v1/ur3_scores.npz",
+      "sha256": "fdcd00a7c767697ce69f0ce419d2bcc03ca19ceb7a841ea0a45db52fb10e4f11"
+    },
+    {
+      "path": "existing_probe/prepared/ur3_rows.json",
+      "sha256": "b171a47e4a8fe0559ebf1a13dc02e4b3ec145cba2bc52065f882fa32c6f93564",
+      "source_sha256": "cbcf87351369169a1c52f168e408b17098cc0f1ecd91eecf8ee5f27f193b70d7",
+      "public_transformation": "Retained ordered id/anomaly/category only; omitted unused source metadata."
+    },
+    {
+      "path": "existing_probe/prepared/ur3_split.json",
+      "sha256": "ddf56da0d60b7841f05ef8ec5413b89cede474b2382dd70d170d68f839740955"
+    },
+    {
+      "path": "new_external/results/factory_pickplace_v1/scores.npz",
+      "sha256": "d6b25bec0bfec405bb996e508feb7307f76a2c839dc33f6bed29037f0a9d8ac2"
+    },
+    {
+      "path": "new_external/prepared/rows.json",
+      "sha256": "c5ae9f339560ed7ce05462ca667b03bef94b10150dbb7ccfcb238da0450f23fe",
+      "source_sha256": "bdae96bb15f351c8fe0bee13de93b13b53e668ee1b83921480dd852214efdf75",
+      "public_transformation": "Retained ordered id/anomaly/category only; omitted unused source metadata."
+    },
+    {
+      "path": "new_external/prepared/split.json",
+      "sha256": "e11f4eaf2a657cf40e7a5160ea61b5e85ff7666134d15647f548db0b3923b4e6"
+    },
+    {
+      "path": "original/metrics.json",
+      "sha256": "9f6a9f3c9135d9f157f599ad32db191ad3f54b3d7c8c35122a447890ac53e679"
+    }
+  ],
+  "scope": "Frozen primary elapsed128 L1 scores; all 5 pools, all 3 cohorts. No training, exclusions, threshold changes or deployment claims. UR3 PCA/IF category counts use frozen original metrics.",
+  "roc": "All distinct score threshold blocks, >= threshold for displayed finite ROC vertices, (0,0) included; preserve ties. Deploy predictions remain score > frozen rank calibration threshold. Full AUC uses trapezoids (tie half-credit). At b=.05,.10 report maximal observed TPR among vertices FPR<=b, without interpolation; normalized partial step area integrates right-continuous upper staircase from 0 to b / b, no randomization. Separately named linear partial AUC/b uses straight lines between threshold vertices including tied blocks. No test ROC threshold feeds deployment. UR3 normals=12: grid 0,1/12,...; below5% only zero-alarm points supported.",
+  "contrasts": [
+    "rms minus mean",
+    "tail_mean minus mean",
+    "tail_rms minus tail_mean"
+  ],
+  "categories": "All UR3 labelled event categories, detected/support at unchanged alpha .05 calibration thresholds; no duration/mechanism attribution.",
+  "normal_diagnostics": "calibration and test normal score ECDF/quantiles only. Fitting NN scores may self-match and are excluded from generalization comparison; record self-zero counts without using them as representative nominal scores. No causal shift diagnosis, population p-values or deployment guarantees."
+}

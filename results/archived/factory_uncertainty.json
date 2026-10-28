@@ -1,0 +1,57 @@
+{
+  "point": {
+    "fpr_delta": -0.0693815987933635,
+    "tpr_delta": -0.20615384615384616,
+    "auroc_delta": -0.06570135746606331,
+    "normal_disagreements": 56,
+    "fault_disagreements": 209
+  },
+  "bootstrap": [
+    {
+      "block_length": 10,
+      "draws": 2000,
+      "valid": 2000,
+      "fpr_tpr_percentiles": [
+        [
+          -0.0981599394247068,
+          -0.263851330588163
+        ],
+        [
+          -0.04260271722325299,
+          -0.15323203645802608
+        ]
+      ]
+    },
+    {
+      "block_length": 25,
+      "draws": 2000,
+      "valid": 2000,
+      "fpr_tpr_percentiles": [
+        [
+          -0.10561596797810034,
+          -0.2845343105564258
+        ],
+        [
+          -0.03488152200682547,
+          -0.12729317265066503
+        ]
+      ]
+    },
+    {
+      "block_length": 50,
+      "draws": 2000,
+      "valid": 2000,
+      "fpr_tpr_percentiles": [
+        [
+          -0.11177684006611259,
+          -0.31591773807966317
+        ],
+        [
+          -0.027731459405195138,
+          -0.10627150285401545
+        ]
+      ]
+    }
+  ],
+  "scope": "Predefined primary paired fixed-cohort circular block percentiles; not population/session coverage or significance. AUROC difference point only."
+}

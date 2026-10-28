@@ -1,0 +1,23 @@
+{
+  "kernel_source": "existing_probe/src/probe.py",
+  "kernel_source_sha256": "6a4cd30dc64bfe537e19da83ed5436bf970cb942bece7499344272d42ec6dbf7",
+  "unchanged_function_bodies": [
+    "dump",
+    "fit_normalization",
+    "interpolate",
+    "metrics",
+    "nearest",
+    "pool",
+    "sha",
+    "simple_features",
+    "stamp",
+    "threshold"
+  ],
+  "new_portable_interfaces": [
+    "prepare.py",
+    "run.py",
+    "download.py"
+  ],
+  "acquire_voraus_source_sha256": "5bcad22a4988b45f6e0e9fddff7ea6c93cd33a8be7a45ae3129a9dbec41d426b",
+  "status": "Portability release; historical results remain the reference. This metadata does not claim a new full model rerun."
+}

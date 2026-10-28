@@ -1,0 +1,65 @@
+{
+  "kind": "release-time portability checks",
+  "synthetic_cli": "PASS; 108 metric records from synthetic fixtures only",
+  "acquire_voraus_self_test": "PASS; mocked HTTP ranges, no network data download",
+  "full_remote_download": "not executed",
+  "full_three_dataset_model_rerun": "not executed",
+  "preparation": {
+    "ur3": "PASS: all four arrays bitwise equal; split indices exactly equal",
+    "voraus": "PASS: all four arrays bitwise equal; split indices exactly equal",
+    "ur3_final_code_recheck": "PASS: final warning-free code regenerated all four arrays bitwise"
+  },
+  "ur3_model": {
+    "all34_pool_and_rule_scores_bitwise_equal": true,
+    "pca_iforest_max_absolute_score_difference": {
+      "pca": 4.732458702694231e-08,
+      "iforest": 0.0021452254942755933
+    },
+    "primary_metrics": [
+      {
+        "method": "nn_elapsed128_l1_mean",
+        "false_alarms": 1,
+        "detected": 25,
+        "auroc": 0.8682795698924731
+      },
+      {
+        "method": "nn_elapsed128_l1_tail_rms",
+        "false_alarms": 1,
+        "detected": 5,
+        "auroc": 0.836021505376344
+      },
+      {
+        "method": "pca",
+        "false_alarms": 1,
+        "detected": 25,
+        "auroc": 0.8844086021505375
+      },
+      {
+        "method": "iforest",
+        "false_alarms": 1,
+        "detected": 25,
+        "auroc": 0.8978494623655915
+      }
+    ]
+  },
+  "factory_metadata": "PASS: all 4308 IDs, order, partitions, labels match historical cohort after actual-source UUID intersection",
+  "environment": {
+    "numpy": "2.3.5",
+    "pandas": "2.2.3",
+    "scipy": "1.16.3",
+    "scikit-learn": "1.7.2",
+    "pyarrow": "22.0.0",
+    "openpyxl": "3.1.5",
+    "joblib": "1.5.2",
+    "threadpoolctl": "3.6.0"
+  },
+  "files": {
+    "experiments/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "experiments/acquire_voraus.py": "5bcad22a4988b45f6e0e9fddff7ea6c93cd33a8be7a45ae3129a9dbec41d426b",
+    "experiments/core.py": "5e0b8507a6d81a10f507a1d7bba0de82085d416db3463331be3a19c48267ad39",
+    "experiments/download.py": "3e3f4114fff91abed21078e8fd0324bce0a3a3e25f33b314184e0baed63fa5fa",
+    "experiments/prepare.py": "fc3c427d1f6c830bd808f8a213f17308fd425e0ce807a130e76c7178a48e8b93",
+    "experiments/run.py": "d77e806456c5a2590d7fe23c32508ecfb369486b17f2c46c33b0022b1e684400"
+  },
+  "kernel_functions_ast_exact_match": 10
+}

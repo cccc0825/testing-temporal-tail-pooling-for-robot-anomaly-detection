@@ -1,0 +1,25 @@
+method,category,support,detected,recall,false_alarms,normal_support,source
+Mean,Protective stop only,24,24,1.0,1,12,frozen continuous scores
+Mean,Grip loss only,6,0,0.0,1,12,frozen continuous scores
+Mean,Both,1,1,1.0,1,12,frozen continuous scores
+All RMS,Protective stop only,24,24,1.0,1,12,frozen continuous scores
+All RMS,Grip loss only,6,0,0.0,1,12,frozen continuous scores
+All RMS,Both,1,1,1.0,1,12,frozen continuous scores
+Max,Protective stop only,24,3,0.125,0,12,frozen continuous scores
+Max,Grip loss only,6,0,0.0,0,12,frozen continuous scores
+Max,Both,1,0,0.0,0,12,frozen continuous scores
+Tail mean,Protective stop only,24,5,0.20833333333333334,1,12,frozen continuous scores
+Tail mean,Grip loss only,6,0,0.0,1,12,frozen continuous scores
+Tail mean,Both,1,0,0.0,1,12,frozen continuous scores
+Tail RMS,Protective stop only,24,5,0.20833333333333334,1,12,frozen continuous scores
+Tail RMS,Grip loss only,6,0,0.0,1,12,frozen continuous scores
+Tail RMS,Both,1,0,0.0,1,12,frozen continuous scores
+Quiet fraction,Protective stop only,24,8,0.3333333333333333,1,12,frozen continuous scores
+Quiet fraction,Grip loss only,6,3,0.5,1,12,frozen continuous scores
+Quiet fraction,Both,1,1,1.0,1,12,frozen continuous scores
+PCA,Protective stop only,24,24,1.0,1,12,original frozen category metrics
+PCA,Grip loss only,6,0,0.0,1,12,original frozen category metrics
+PCA,Both,1,1,1.0,1,12,original frozen category metrics
+Isolation forest,Protective stop only,24,24,1.0,1,12,original frozen category metrics
+Isolation forest,Grip loss only,6,0,0.0,1,12,original frozen category metrics
+Isolation forest,Both,1,1,1.0,1,12,original frozen category metrics
