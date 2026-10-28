@@ -8,7 +8,7 @@ def sha(path):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('mode', choices=['verify', 'analysis', 'figures'])
+    parser.add_argument('mode', choices=['verify', 'analysis', 'figures', 'tables'])
     args = parser.parse_args()
     if args.mode == 'verify':
         manifest = json.loads((ROOT / 'MANIFEST.json').read_text())
@@ -24,6 +24,8 @@ def main():
             if sha(output) != sha(reference):
                 raise SystemExit('Numerical output differs from the archive: ' + reference.name)
         print('All six numerical CSVs reproduce byte for byte from packaged scores.')
+    elif args.mode == 'tables':
+        subprocess.run([sys.executable, str(ROOT / 'analysis/export_tables.py')], check=True)
     else:
         subprocess.run([sys.executable, str(ROOT / 'analysis/plot_vector.py')], check=True)
 

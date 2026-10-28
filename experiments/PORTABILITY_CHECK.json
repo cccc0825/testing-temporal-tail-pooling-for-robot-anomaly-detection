@@ -2,7 +2,7 @@
   "kind": "release-time portability checks",
   "synthetic_cli": "PASS; 108 metric records from synthetic fixtures only",
   "acquire_voraus_self_test": "PASS; mocked HTTP ranges, no network data download",
-  "full_remote_download": "not executed",
+  "full_remote_download": "UR3 completed and pinned ZIP SHA256 verified; voraus-AD and FactoryNet not repeated",
   "full_three_dataset_model_rerun": "not executed",
   "preparation": {
     "ur3": "PASS: all four arrays bitwise equal; split indices exactly equal",
@@ -40,7 +40,8 @@
         "detected": 25,
         "auroc": 0.8978494623655915
       }
-    ]
+    ],
+    "verification_context": "Earlier local-source portability check; kept as the record of that execution."
   },
   "factory_metadata": "PASS: all 4308 IDs, order, partitions, labels match historical cohort after actual-source UUID intersection",
   "environment": {
@@ -61,5 +62,46 @@
     "experiments/prepare.py": "fc3c427d1f6c830bd808f8a213f17308fd425e0ce807a130e76c7178a48e8b93",
     "experiments/run.py": "d77e806456c5a2590d7fe23c32508ecfb369486b17f2c46c33b0022b1e684400"
   },
-  "kernel_functions_ast_exact_match": 10
+  "kernel_functions_ast_exact_match": 10,
+  "fresh_clone_reproduction": {
+    "date": "2026-10-29",
+    "timezone": "Australia/Sydney",
+    "base_commit": "aad291681f96fb56f55b9dc6e97f483f5cb39696",
+    "python": "3.12.14",
+    "isolated_venv": true,
+    "system_site_packages": false,
+    "both_requirements_installed": true,
+    "quick_commands_all_exit_zero": true,
+    "diagnostic_csvs_byte_identical": 6,
+    "generated_pdf_files_opened": 2,
+    "synthetic_model_tests": "PASS",
+    "ur3_fresh_source_sha256": "233334eeb5370e594ea621796ca2d693bd4980cc2bb24fa749b1b633a4993c8d",
+    "ur3_fresh_source_bytes": 1767936,
+    "ur3_preparation_and_model_exit_zero": true,
+    "ur3_methods": 36,
+    "ur3_metric_records": 108,
+    "ur3_pool_rule_vectors_bitwise_equal": 34,
+    "ur3_pool_rule_metric_records_equal": 102,
+    "historical_baseline_source_run": "timestamp_corrected_v2",
+    "pca_iforest_max_absolute_score_difference": {
+      "pca": 2.220446049250313e-16,
+      "iforest": 0.0021452254942755933
+    },
+    "baseline_primary_false_alarms_detections_auroc_match": true
+  },
+  "historical_baseline_scores": {
+    "run_id": "timestamp_corrected_v2",
+    "datasets": [
+      "voraus",
+      "ur3"
+    ],
+    "methods": [
+      "pca",
+      "iforest"
+    ],
+    "test_metric_checks": 12,
+    "source_hashes_match_completed_manifest": true,
+    "row_order_labels_fit_cal_test_indices_match": true,
+    "source_provenance": "inputs/original/BASELINE_SCORE_PROVENANCE.json"
+  }
 }

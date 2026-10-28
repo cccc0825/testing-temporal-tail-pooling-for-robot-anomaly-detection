@@ -1,0 +1,173 @@
+{
+  "historical_run_id": "timestamp_corrected_v2",
+  "historical_run_state": "completed",
+  "historical_started_at": "2026-09-12T05:51:28.965135+00:00",
+  "historical_ended_at": "2026-09-12T05:51:45.157880+00:00",
+  "historical_manifest_sha256": "b286a778dc4ddf01a6a697ba5f93aeb8c54e3289b99936013b23d56de7169693",
+  "metrics_sha256": "9f6a9f3c9135d9f157f599ad32db191ad3f54b3d7c8c35122a447890ac53e679",
+  "transformation": "Extract pca and iforest numeric arrays without changing values, dtype or row order; no models rerun.",
+  "datasets": {
+    "voraus": {
+      "source_file": "voraus_2027_scores.npz",
+      "source_sha256": "3d1e40555e2e18b7fcd5d3f12e6d1152dd1f38ca6d76ea975b9450d52396bffe",
+      "output_file": "inputs/original/voraus_baseline_scores.npz",
+      "output_sha256": "5fcbaec9fcf871b0dd9f4cb2e21c1e6e573ceec8c4dec24628f6d4b1c675a0fd",
+      "shape": [
+        2122
+      ],
+      "methods": [
+        "pca",
+        "iforest"
+      ],
+      "aligned_rows_file": "inputs/existing_probe/prepared/voraus_rows.json",
+      "aligned_rows_sha256": "45154477dc08de4d3864d25757c3d6cbf7e3824e98be003559237d163a3c8715",
+      "aligned_split_file": "inputs/existing_probe/prepared/voraus_split.json",
+      "aligned_split_sha256": "2cb4f00c9e1538be876c691b9909afd3a8cdce64b7090b794c8b407587770bff",
+      "historical_fit_cal_test_indices_match": true,
+      "historical_row_order_and_labels_match": true,
+      "archived_metric_checks": [
+        {
+          "method": "pca",
+          "alpha": 0.01,
+          "false_alarms": 3,
+          "detected": 40,
+          "counts_match": true,
+          "auroc_abs_difference": 0.0,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "pca",
+          "alpha": 0.05,
+          "false_alarms": 51,
+          "detected": 333,
+          "counts_match": true,
+          "auroc_abs_difference": 0.0,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "pca",
+          "alpha": 0.1,
+          "false_alarms": 100,
+          "detected": 496,
+          "counts_match": true,
+          "auroc_abs_difference": 0.0,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "iforest",
+          "alpha": 0.01,
+          "false_alarms": 11,
+          "detected": 53,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "iforest",
+          "alpha": 0.05,
+          "false_alarms": 34,
+          "detected": 120,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "iforest",
+          "alpha": 0.1,
+          "false_alarms": 73,
+          "detected": 186,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        }
+      ]
+    },
+    "ur3": {
+      "source_file": "ur3_2027_scores.npz",
+      "source_sha256": "afef221b7b2e700d5e205277f0c632e27aa6b8199371b54e0c087ed8dbe15ec1",
+      "output_file": "inputs/original/ur3_baseline_scores.npz",
+      "output_sha256": "434b749210257e531ed21e9ed2265f168a755209aaef3e1392c37608bc8a54da",
+      "shape": [
+        147
+      ],
+      "methods": [
+        "pca",
+        "iforest"
+      ],
+      "aligned_rows_file": "inputs/existing_probe/prepared/ur3_rows.json",
+      "aligned_rows_sha256": "b171a47e4a8fe0559ebf1a13dc02e4b3ec145cba2bc52065f882fa32c6f93564",
+      "aligned_split_file": "inputs/existing_probe/prepared/ur3_split.json",
+      "aligned_split_sha256": "ddf56da0d60b7841f05ef8ec5413b89cede474b2382dd70d170d68f839740955",
+      "historical_fit_cal_test_indices_match": true,
+      "historical_row_order_and_labels_match": true,
+      "archived_metric_checks": [
+        {
+          "method": "pca",
+          "alpha": 0.01,
+          "false_alarms": 0,
+          "detected": 0,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "pca",
+          "alpha": 0.05,
+          "false_alarms": 1,
+          "detected": 25,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "pca",
+          "alpha": 0.1,
+          "false_alarms": 1,
+          "detected": 25,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "iforest",
+          "alpha": 0.01,
+          "false_alarms": 0,
+          "detected": 0,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "iforest",
+          "alpha": 0.05,
+          "false_alarms": 1,
+          "detected": 25,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        },
+        {
+          "method": "iforest",
+          "alpha": 0.1,
+          "false_alarms": 1,
+          "detected": 25,
+          "counts_match": true,
+          "auroc_abs_difference": 1.1102230246251565e-16,
+          "category_counts_match": true,
+          "threshold_match": true
+        }
+      ]
+    }
+  }
+}

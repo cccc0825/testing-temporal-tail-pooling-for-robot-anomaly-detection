@@ -34,6 +34,8 @@ The study selects effort/speed channels, partitions and interpolates records, fi
 
 - `inputs/existing_probe/**/voraus_*`: voraus-AD derived data, CC BY-NC-SA 4.0.
 - `inputs/existing_probe/**/ur3_*`: UR3 CobotOps derived data, CC BY 4.0.
+- `inputs/original/voraus_baseline_scores.npz`: voraus-AD derived PCA/Isolation Forest scores, CC BY-NC-SA 4.0.
+- `inputs/original/ur3_baseline_scores.npz`: UR3 CobotOps derived PCA/Isolation Forest scores, CC BY 4.0.
 - `inputs/new_external/**`: FactoryNet derived data, CC BY-NC-SA 4.0.
 - `inputs/original/metrics.json` and `results/reference/*`: combined source-specific metrics. The source-specific terms remain attached to their respective portions; preserve all notices when redistributing the combined files.
 
